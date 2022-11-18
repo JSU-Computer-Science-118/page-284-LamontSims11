@@ -2,47 +2,20 @@
 // Program 5-6                  Page #284
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
-
 using namespace std;
 
-int main()
+int main ()
 {
-    int num;
+  int n, t, c;
 
-    int guess;
+  cin >> n;
 
-    bool isGuessed;
 
-    srand(time(0));
-    num = rand() % 100;
+  for (c = 1; c <= n; c++)
+  {
+    t = rand() % 100;
+    cout << t << " ";
+  }
 
-    isGuessed = false;
-
-    while (!isGuessed)
-    {
-        cout << "Enter an integer greater"
-             << " than or equal to 0 and "
-             << "less than 100: ";
-        
-        cin >> guess;
-        cout << endl;
-
-        if (guess == num)
-        {
-            cout << "You guessed the correct "
-                 << "number." << endl;
-            isGuessed = true;
-        }
-        else if (guess < num)
-            cout << "Your guess is lower than the "
-                 << "number. \n Guess again! "
-                 << endl;
-        else
-            cout << "Your guess is higher than "
-                 << "the number.\n Guess again! "
-                 << endl;
-    }
-
-    return 0;
+  return 0;
 }
